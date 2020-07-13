@@ -106,5 +106,9 @@ Após essa etapa será marcado a apresentação/correção do projeto.
 4. Prepara-se pois você será questionado sobre cada etapa e decisão do Challenge;
 5. Prepare uma lista de perguntas, dúvidas, sugestões de melhorias e feedbacks (caso tenha).
 
+## Suporte
+
+Use o nosso canal no slack: http://bit.ly/32CuOMy para tirar dúvidas sobre o processo ou envie um e-mail para contato@coodesh.com. 
+
 
 
