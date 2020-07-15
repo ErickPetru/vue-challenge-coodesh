@@ -5,3 +5,30 @@ body,
 #app {
   @apply h-full;
 }
+
+input::placeholder {
+  @apply opacity-100;
+  @apply text-white;
+  @apply text-opacity-75;
+}
+
+input::-moz-placeholder {
+  @apply opacity-100;
+  @apply text-white;
+  @apply text-opacity-75;
+}
+
+input, button, a {
+  @apply transition;
+  @apply duration-300;
+  @apply ease-in-out;
+}
+
+.form-checkbox {
+  cursor: inherit;
+}
+
+.form-checkbox:hover + span,
+.form-checkbox:focus + span {
+  @apply text-opacity-100;
+}
