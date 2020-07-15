@@ -3,7 +3,10 @@ export default {
   target: 'server',
   head: {
     titleTemplate: (title) =>
-      title ? '%s - Melhor com Saúde' : 'Melhor com Saúde',
+      title
+        ? `${title} - Melhor com Saúde - Revista sobre bons hábitos e cuidados para a sua saúde`
+        : 'Melhor com Saúde - Revista sobre bons hábitos e cuidados para a sua saúde',
+    description: 'Revista sobre bons hábitos e cuidados para a sua saúde',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -30,7 +33,7 @@ export default {
         sizes: '16x16',
         href: '/favicon-16x16.png',
       },
-      { rel: 'manifest', href: '/manifest.json' },
+      { rel: 'manifest', href: '/site.webmanifest' },
       {
         rel: 'mask-icon',
         href: '/safari-pinned-tab.svg',
@@ -55,14 +58,18 @@ export default {
     'nuxt-webfontloader',
   ],
   modules: [
-    // Doc: https://axios.nuxtjs.org/
-    '@nuxtjs/axios',
+    // Doc: https://http.nuxtjs.org/
+    '@nuxt/http',
 
     // Doc: https://pwa.nuxtjs.org/
     '@nuxtjs/pwa',
   ],
-  axios: {
-    baseURL: 'https://api.beta.mejorconsalud.com/wp-json/mc/v1/',
+  plugins: [
+    '@/plugins/filter-date-format.js',
+    '@/plugins/filter-date-parse.js',
+  ],
+  http: {
+    baseURL: 'https://api.beta.mejorconsalud.com/wp-json/mc/',
   },
   pwa: {
     workbox: {
@@ -74,16 +81,22 @@ export default {
         suffix: 'v20200714',
       },
     },
-    meta: false,
+    meta: {
+      lang: 'pt-BR',
+      display: 'browser',
+      name: 'Melhor com Saúde',
+      author: 'Erick Eduardo Petrucelli <erickpetru@gmail.com>',
+      description: 'Revista sobre bons hábitos e cuidados para a sua saúde',
+    },
     icon: false,
     manifest: false,
   },
   webfontloader: {
     custom: {
-      families: ['Montserrat:n3,n4,n5', 'Oswald:n4'],
+      families: ['Roboto:n4,n7', 'Signika:n7'],
       urls: [
-        'https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap',
-        'https://fonts.googleapis.com/css?family=Oswald:400&display=swap',
+        'https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap',
+        'https://fonts.googleapis.com/css?family=Signika:700&display=swap',
       ],
     },
   },
