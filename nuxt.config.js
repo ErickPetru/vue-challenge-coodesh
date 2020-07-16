@@ -70,6 +70,7 @@ export default {
   plugins: [
     '@/plugins/filter-date-format.js',
     '@/plugins/filter-date-parse.js',
+    '@/plugins/filter-media-to-srcset.js',
   ],
   http: {
     baseURL: 'https://api.beta.mejorconsalud.com/wp-json/mc/',

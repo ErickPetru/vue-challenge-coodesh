@@ -49,29 +49,6 @@
 <script>
 export default {
   name: 'PostListItem',
-  filters: {
-    mediaToSrcset(media) {
-      const srcset = []
-
-      if (media['big-size']) {
-        srcset.push(`${media['big-size']} 470w`)
-      }
-      if (media['big-size_mobile']) {
-        srcset.push(`${media['big-size_mobile']} 370w`)
-      }
-      if (media['mid-size']) {
-        srcset.push(`${media['mid-size']} 280w`)
-      }
-      if (media['mid-size_mobile']) {
-        srcset.push(`${media['mid-size_mobile']} 160w`)
-      }
-      if (media.large) {
-        srcset.push(`${media.large} 500w`)
-      }
-
-      return srcset.length ? srcset.join(', ').substr(0, -2) : null
-    },
-  },
   props: {
     post: {
       type: Object,
