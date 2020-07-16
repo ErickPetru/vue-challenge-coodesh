@@ -1,3 +1,6 @@
+import * as fs from 'fs'
+import * as path from 'path'
+
 export default {
   mode: 'universal',
   target: 'server',
@@ -116,5 +119,20 @@ export default {
   },
   build: {
     parallel: process.env.NODE_ENV === 'development',
+  },
+  server: {
+    // Enable HTTPS on 'production' or simulates it on 'development'
+    https:
+      process.env.NODE_ENV === 'production' ||
+      fs.existsSync(path.resolve(__dirname, 'private/localhost.key'))
+        ? {
+            key: fs.readFileSync(
+              path.resolve(__dirname, 'private/localhost.key')
+            ),
+            cert: fs.readFileSync(
+              path.resolve(__dirname, 'private/localhost.crt')
+            ),
+          }
+        : false,
   },
 }
