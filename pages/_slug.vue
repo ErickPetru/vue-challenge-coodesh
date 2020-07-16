@@ -161,11 +161,7 @@ export default {
     },
   },
   async fetch() {
-    const { data } = await this.$http.$get(
-      `v2/posts?slug=${this.$route.params.slug}`
-    )
-    const { id } = data.shift()
-    this.post = await this.$http.$get(`v1/posts/${id}`)
+    this.post = await this.$http.$get(`v1/posts/${this.$route.params.slug}`)
   },
   data: () => ({
     searchOptions: {
