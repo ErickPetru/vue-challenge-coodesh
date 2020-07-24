@@ -1,6 +1,6 @@
 {
-  "name": "vue-challenge-vbc",
-  "description": "Desafio Vue.js para a aplicação \"Melhor com Saúde\" da Vibracon Sistemas",
+  "name": "vue-challenge-coodesh",
+  "description": "Desafio Vue.js referente à aplicação \"Melhor com Saúde\", utilizada como tema pela Coodesh em alguns treinamentos e processos de seleção",
   "author": "Erick Eduardo Petrucelli <erickpetru@gmail.com>",
   "version": "1.0.0",
   "license": "MIT",

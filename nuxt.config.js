@@ -81,7 +81,7 @@ export default {
       debug: process.env.NODE_ENV === 'development',
       cleanupOutdatedCaches: true,
       cacheNames: {
-        prefix: process.env.npm_package_name || 'vue-challenge-vbc',
+        prefix: process.env.npm_package_name || 'vue-challenge-coodesh',
         suffix: 'v20200714',
       },
     },

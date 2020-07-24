@@ -1,8 +1,8 @@
 <img src="./assets/img/icon.svg" alt="Melhor com Saúde" width="96">
 
-# Vue Challenge VBC
+# Vue Challenge Coodesh
 
-> Desafio Vue.js para a aplicação *Melhor com Saúde* da [Vibracon Sistemas](http://vibraconsistemas.com.br/), referente à vaga [\[Remoto\] Frontend Vue.js Developer Sr (Part-Time) @ VBC Sistemas Inteligentes](https://github.com/vuejs-br/vagas/issues/148).
+> Desafio Vue.js referente à aplicação *Melhor com Saúde*, utilizada como tema pela [Coodesh](https://coodesh.com/) em alguns treinamentos e processos de seleção.
 
 A estrutura deste projeto foi gerada com o [Nuxt Create App](https://nuxtjs.org/guide/installation/). Se você nunca construiu projetos _front-end_ utilizando este tipo de ferramenta, fica a dica: instale o [Node](https://nodejs.org/) antes de começar. Para uma explicação mais aprofundada de como as coisas funcionam, recomenda-se estudar a [documentação do Nuxt.js](https://nuxtjs.org).
 
